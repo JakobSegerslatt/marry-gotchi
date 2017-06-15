@@ -1,1 +1,30 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'assets/materialize-src/sass/materialize';
+@import '~@angular/material/theming';
+body {
+    @include mat-core(); // -----------------------
+    // LIGHT THEME DEFINITIONS
+    $vintus-primary: mat-palette($mat-purple);
+    $vintus-accent: mat-palette($mat-green, A200, A100, A400);
+    $vintus-warn: mat-palette($mat-red);
+    $vintus-theme: mat-light-theme($vintus-primary, $vintus-accent, $vintus-warn); // ---------------------
+    // DARK THEME DEFINTIONS
+    $dark-primary: mat-palette($mat-purple);
+    $dark-accent: mat-palette($mat-green, A200, A100, A400);
+    $dark-warn: mat-palette($mat-red);
+    $vintus--dark-theme: mat-dark-theme($dark-primary, $dark-accent, $dark-warn); // ---------------------------------------------------------------------------------------------
+    // Include theme through angular materials own mixin as well as all our custom components mixins.
+    @include angular-material-theme($vintus-theme);
+    .dark-theme {
+        // Include theme through angular materials own mixin as well as all our custom components mixins.  
+        @include angular-material-theme($vintus--dark-theme);
+    }
+}
+
+html,
+body,
+app-root {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-family: Press Start\ 2P !important;
+}

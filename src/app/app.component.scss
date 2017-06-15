@@ -1,0 +1,41 @@
+md-toolbar {
+    font-family: Press Start\ 2P !important;
+}
+
+#main-container {
+    padding: 25px 15px 15px 30px;
+    font-family: Press Start\ 2P !important;
+    .status-card {
+        margin-bottom: 10px;
+        min-width: 250px;
+        min-height: 200px;
+        font-family: Press Start\ 2P !important;
+        .slider-block {
+            margin-top: 20px;
+            .slider-value {
+                margin-left: 10px;
+                font-size: 0.9em;
+            }
+            md-progress-bar {
+                margin-top: 3px;
+            }
+        }
+    }
+    .action-card {
+        .action-row {
+            button {
+                font-size: 0.8em;
+                font-family: Press Start\ 2P !important;
+                margin: 5px;
+            }
+        }
+        .reset {
+            padding-top: 15px;
+            font-size: 0.8em;
+            color: lightgrey;
+        }
+    }
+    .countdown {
+        color: white;
+    }
+}
